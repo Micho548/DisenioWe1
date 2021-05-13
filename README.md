@@ -1,7 +1,7 @@
-This is my new file
+This Is My New File
 
 This is a configuration file
 
-you have to follow the next instructions
+You have to follow the next instructions
 
-This is a new document which gonna change with the time
+This is a new document, we gonna change with the time
