@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../styles.css">
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../styles/modal.css">
+    <link rel="stylesheet" type="text/css" href="../styles/forms.css">
+    <title>My Web Page</title>
 </head>
 <body>
     <nav class="topnav">
@@ -21,6 +23,48 @@
         </div>
     </nav>
 
-    <p>Login Working!</p>
+    <h2>Modal Login Form</h2>
+
+    <button style="width: auto;"
+        onclick="document.getElementById('id01').style.display = 'block'">login</button>
+
+    <div id="id01" class="modal">
+        <form class="modal-content animate">
+            <div class="imgcontainer">
+                <span 
+                onclick="document.getElementById('id01').style.display ='none'"
+                class="close" title="Close Modal">&times;</span>
+                <img src="../images/img.png" style="width: 50%;" class="avatar">
+            </div>
+
+            <div class="container">
+                <label for="username"><b>User Name</b></label>
+                <input type="text" placeholder="Enter your user name" required>
+                
+                <label for="password"><b>Password</b></label>
+                <input type="password" placeholder="Enter yourpassword" required>
+
+                <button>Login</button>
+            </div>
+
+            <div class="container">
+                <button
+                    onclick="document.getElementById('id01').style.display='none'"
+                    class="cancelBtn">
+                    Cancel
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        var modal = document.getElementById('id01');
+
+        window.onclick = function(event) {
+            if(event.target == modal){
+                modal.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
